@@ -1,14 +1,39 @@
-.jumbotron {
-	padding-top: 6rem;
-	background-color: #e2edff;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* ----------------- ALL ----------------------*/
+body {
+	background-color: #f8f8f8;
+	font-family: "Roboto", sans-serif;
+	color: #1e1e1e;
+}
+h1 {
+	font-weight: 300;
+	letter-spacing: 1.7px;
+	line-height: 30px;
 }
 
-#projects {
-	background-color: #e2edff;
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+.container {
+	display: flex;
+	padding: 80px;
 }
 
-#about {
-	padding-top: 5rem;
+/*---------------- CONTENT --------------------*/
+.content {
+	/*	background-color: salmon;*/
+	margin-top: 200px;
+	flex-grow: 2;
+	padding: 20px;
+}
+
+/*----- NAVIGATION -----*/
+nav {
+	/*	background-color: skyblue;*/
+	margin-top: 200px;
+	flex-grow: 3;
+	padding: 20px;
 }
 
 /*----------------SOCIAL MEDIA------------------*/
@@ -17,9 +42,11 @@
 }
 /*untuk dasar background social*/
 .wrapper-social {
+	/*	background-color: salmon;*/
 	margin-top: -18px;
+	position: absolute;
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 }
 
 .wrapper-social .button {
