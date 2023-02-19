@@ -31,6 +31,7 @@ nav ul {
 .container {
 	display: flex;
 	padding: 80px;
+	margin-top: 100px;
 }
 
 a {
@@ -38,15 +39,12 @@ a {
 }
 /*---------------- CONTENT --------------------*/
 .content {
-	/*	background-color: salmon;*/
-	margin-top: 200px;
 	flex-grow: 2;
 	padding: 20px;
 }
 
 /*----- NAVIGATION -----*/
 nav {
-	margin-top: 200px;
 	flex-grow: 3;
 	padding: 20px;
 }
