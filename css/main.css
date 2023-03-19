@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@font-face {
+  font-family: "Fredoka One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fredokaone/v13/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* ----------------- ALL ----------------------*/
+body {
+  background-color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+  color: #1e1e1e;
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: 1.7px;
+  line-height: 30px;
+}
+
+.container {
+  display: flex;
+  padding: 80px;
+  margin-top: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*---------------- CONTENT --------------------*/
+.content {
+  flex-grow: 2;
+  padding: 20px;
+}
+
+/*--------------- NAVIGATION -----------------*/
+nav {
+  flex-grow: 3;
+  padding: 20px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*---------------- SKILL ------------------*/
+/*agar tidak colap*/
+.wrapper-colap {
+  height: 50px;
+}
+
+.wrapper-skill {
+  margin-top: -18px;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+}
+.wrapper-skill .button {
+  height: 60px;
+  width: 60px;
+  margin: 10px 5px;
+  border-radius: 60px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.wrapper-skill .button .icon {
+  /*style dasar untuk icon*/
+  width: 60px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper-skill .button .icon img {
+  /*untuk ukuran awal img*/
+  width: 20px; /*variable*/
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper-skill .button span {
+  /*style untuk  mengatur posisi tulisan social*/
+  font-family: Fredoka One;
+  line-height: 60px; /*variable*/
+  font-size: 18px; /*varible*/
+  font-weight: bold;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-out;
+}
+.wrapper-skill .button:nth-child(1):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-skill .button:nth-child(1):hover {
+  width: 150px;
+}
+.wrapper-skill .button:nth-child(1):hover .icon {
+  background: #f06529;
+}
+.wrapper-skill .button:nth-child(1) span {
+  color: #e34c26;
+}
+.wrapper-skill .button:nth-child(2):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-skill .button:nth-child(2):hover {
+  width: 140px;
+}
+.wrapper-skill .button:nth-child(2):hover .icon {
+  background: #2965f1;
+}
+.wrapper-skill .button:nth-child(2) span {
+  color: #264de4;
+}
+.wrapper-skill .button:nth-child(3):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-skill .button:nth-child(3):hover {
+  width: 210px;
+}
+.wrapper-skill .button:nth-child(3):hover .icon {
+  background: #f0db4f;
+}
+.wrapper-skill .button:nth-child(3) span {
+  color: #323330;
+}
+
+/*----------------SOCIAL MEDIA------------------*/
+/*untuk dasar background social*/
+.wrapper-social {
+  margin-top: -18px;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+}
+.wrapper-social .button {
+  height: 60px;
+  width: 60px;
+  margin: 10px 5px;
+  border-radius: 60px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.wrapper-social .button .icon {
+  /*style dasar untuk icon*/
+  width: 60px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper-social .button .icon img {
+  /*untuk ukuran awal img*/
+  width: 20px; /*variable*/
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper-social .button span {
+  /*style untuk  mengatur posisi tulisan social*/
+  font-family: Fredoka One;
+  line-height: 60px; /*variable*/
+  font-size: 18px; /*varible*/
+  font-weight: bold;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-out;
+}
+.wrapper-social .button:nth-child(1):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-social .button:nth-child(1):hover {
+  width: 160px;
+}
+.wrapper-social .button:nth-child(1):hover .icon {
+  background: #ea4335;
+}
+.wrapper-social .button:nth-child(1) span {
+  color: #ea4335;
+}
+.wrapper-social .button:nth-child(2):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-social .button:nth-child(2):hover {
+  width: 170px;
+}
+.wrapper-social .button:nth-child(2):hover .icon {
+  background: #333;
+}
+.wrapper-social .button:nth-child(2) span {
+  color: #333;
+}
+.wrapper-social .button:nth-child(3):hover .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+.wrapper-social .button:nth-child(3):hover {
+  width: 190px;
+}
+.wrapper-social .button:nth-child(3):hover .icon {
+  background: #0072b1;
+}
+.wrapper-social .button:nth-child(3) span {
+  color: #0072b1;
+}
+
+/*# sourceMappingURL=main.css.map */

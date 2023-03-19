@@ -1,0 +1,165 @@
+@use "mixins";
+@use "sass:map";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+	font-family: "Fredoka One";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/fredokaone/v13/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2)
+		format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+
+$icon_html: (
+	"color": #e34c26,
+	"width": 150px,
+	"bg": #f06529,
+);
+$icon_css: (
+	"color": #264de4,
+	"width": 140px,
+	"bg": #2965f1,
+);
+$icon_js: (
+	"color": #323330,
+	"width": 210px,
+	"bg": #f0db4f,
+);
+$icon_gmail: (
+	"color": #ea4335,
+	"width": 160px,
+	"bg": #ea4335,
+);
+$icon_github: (
+	"color": #333,
+	"width": 170px,
+	"bg": #333,
+);
+$icon_linkedin: (
+	"color": #0072b1,
+	"width": 190px,
+	"bg": #0072b1,
+);
+
+// ukuran button
+$size: 1;
+
+//Jenis Font
+$font-family: Fredoka One;
+
+/* ----------------- ALL ----------------------*/
+body {
+	background-color: #f8f8f8;
+	font-family: "Roboto", sans-serif;
+	color: #1e1e1e;
+}
+h1 {
+	font-weight: 300;
+	letter-spacing: 1.7px;
+	line-height: 30px;
+}
+
+.container {
+	display: flex;
+	padding: 80px;
+	margin-top: 100px;
+}
+
+a {
+	text-decoration: none;
+}
+/*---------------- CONTENT --------------------*/
+.content {
+	flex-grow: 2;
+	padding: 20px;
+}
+
+/*--------------- NAVIGATION -----------------*/
+nav {
+	flex-grow: 3;
+	padding: 20px;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+/*---------------- SKILL ------------------*/
+
+/*agar tidak colap*/
+.wrapper-colap {
+	height: 50px;
+}
+
+.wrapper-skill {
+	@include mixins.btn_size($size, $font_family);
+
+	.button {
+		&:nth-child(1) {
+			@include mixins.hover_anim(
+				map.get($icon_html, "width"),
+				map.get($icon_html, "bg"),
+				map.get($icon_html, "color"),
+				$size
+			);
+		}
+
+		&:nth-child(2) {
+			@include mixins.hover_anim(
+				map.get($icon_css, "width"),
+				map.get($icon_css, "bg"),
+				map.get($icon_css, "color"),
+				$size
+			);
+		}
+
+		&:nth-child(3) {
+			@include mixins.hover_anim(
+				map.get($icon_js, "width"),
+				map.get($icon_js, "bg"),
+				map.get($icon_js, "color"),
+				$size
+			);
+		}
+	}
+}
+
+/*----------------SOCIAL MEDIA------------------*/
+
+/*untuk dasar background social*/
+.wrapper-social {
+	@include mixins.btn_size($size, $font_family);
+
+	.button {
+		&:nth-child(1) {
+			@include mixins.hover_anim(
+				map.get($icon_gmail, "width"),
+				map.get($icon_gmail, "bg"),
+				map.get($icon_gmail, "color"),
+				$size
+			);
+		}
+		&:nth-child(2) {
+			@include mixins.hover_anim(
+				map.get($icon_github, "width"),
+				map.get($icon_github, "bg"),
+				map.get($icon_github, "color"),
+				$size
+			);
+		}
+		&:nth-child(3) {
+			@include mixins.hover_anim(
+				map.get($icon_linkedin, "width"),
+				map.get($icon_linkedin, "bg"),
+				map.get($icon_linkedin, "color"),
+				$size
+			);
+		}
+	}
+}

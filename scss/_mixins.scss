@@ -1,0 +1,71 @@
+// ------------------UKURAN AWAL DAN FONT FAMILY -----------------
+@mixin btn_size($size, $font_family) {
+	margin-top: -18px;
+	position: absolute;
+	display: flex;
+	justify-content: start;
+
+	.button {
+		height: $size * 60px;
+		width: $size * 60px;
+		margin: 10px 5px;
+		border-radius: $size * 60px;
+		display: flex;
+		overflow: hidden;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+		background: #fff;
+		transition: all 0.3s ease-out;
+		cursor: pointer;
+
+		.icon {
+			/*style dasar untuk icon*/
+			width: $size * 60px;
+			border-radius: $size * 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+			transition: all 0.3s ease-out;
+
+			img {
+				/*untuk ukuran awal img*/
+				width: 20px; /*variable*/
+				line-height: 60px;
+				transition: all 0.3s ease-out;
+			}
+		}
+
+		span {
+			/*style untuk  mengatur posisi tulisan social*/
+			font-family: $font-family;
+			line-height: $size * 60px; /*variable*/
+			font-size: $size * 18px; /*varible*/
+			font-weight: bold;
+			margin-left: 10px;
+			letter-spacing: 2px;
+			transition: all 0.3s ease-out;
+		}
+	}
+}
+
+//------------PERILAKU SAAT DI HOVER ----------------
+@mixin hover_anim($width_btn, $bg_btn, $text_color, $size) {
+	&:hover {
+		.icon {
+			img {
+				filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg)
+					brightness(103%) contrast(103%);
+			}
+		}
+	}
+
+	&:hover {
+		width: $size * $width_btn;
+		.icon {
+			background: $bg_btn;
+		}
+	}
+	span {
+		color: $text_color;
+	}
+}
