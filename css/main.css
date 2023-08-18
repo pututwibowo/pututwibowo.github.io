@@ -45,6 +45,9 @@ nav ul {
   list-style: none;
   padding: 0;
 }
+nav ul li {
+  margin: 10px 0;
+}
 
 /*---------------- SKILL ------------------*/
 /*agar tidak colap*/

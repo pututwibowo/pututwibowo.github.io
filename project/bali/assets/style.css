@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+body {
+	background-image: url(image/bg-body.png);
+	font-family: "Kalam", cursive;
+}
+p,h3,ul,b{
+	font-size: 1.5em;
+}
+h2{
+	font-size: 3em;
+}
+
+
+/*------------HEADER-------------*/
+header {
+	display: inline;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	justify-content: right;
+	gap: 2%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #333;
+	z-index: 999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*style pada tulisan bali*/
+
+.hero {
+	height: 900px;
+	padding: 50px;
+	background-image: url(image/hero.png);
+	background-position: 50% -30%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero img {
+	margin-top: -100px;
+	margin-left: 30px;
+	width: 250px;
+	filter: drop-shadow(5px 5px 5px #222) brightness(0.7);
+}
+
+.hero img:hover {
+	filter: drop-shadow(5px 5px 5px #222) brightness(1.2);
+	cursor: pointer;
+}
+
+.hero img:nth-child(4) {
+	margin-left: -70px;
+}
+
+/*-----------MAIN--------------*/
+
+article.sejarah,
+article.detail {
+	margin: 100px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 96px;
+}
+
+section.description {
+	max-width: 400px;
+	text-align: justify;
+	margin-top: 5px;
+}
+
+.content article:nth-child(even) section {
+	order: 1;
+}
+
+.content article img {
+	width: 50%;
+	border-radius: 10%;
+}
+
+.content article.detail img {
+	width: 200px;
+	border-radius: 50%;
+}
+
+.content article .profil {
+	width: 20%;
+}
+
+/*--------------------PAKET HARGA------------------*/
+.paket-harga {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	background-image: url(image/bg-paket-harga.png);
+	height: 900px;
+}
+
+.harga {
+	padding: 50px;
+	padding-bottom: 60px;
+	margin-bottom: 10px;
+	background-image: url(image/harga.png);
+	background-position: 30% 0%;
+	background-repeat: no-repeat;
+	line-height: 25px;
+}
+/*---BUTTON---*/
+
+.btn {
+	font-size: 30px;
+	font-weight: 700;
+	height: 60px;
+	width: 320px;
+	cursor: pointer;
+	color: #fff;
+	border-color: transparent;
+	background-color: #111;
+	border-radius: 10px;
+}
+
+.btn:hover {
+	background-color: #222;
+}
+
+.btn-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 30px;
+}
+
+.btn-container button {
+	margin: auto;
+}
+
+/*--------------------FAQ-------------------*/
+
+.faq-content {
+	display: flex;
+	gap:100px;
+	justify-content: center;
+}
+
+.faq-left {
+	max-width: 600px;
+}
+
+/*bagian intractive web*/
+
+/*plus minus animasi*/
+
+.faq-slide-switch {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.faq-slide-switch .plus-min div {
+	width: 15px;
+	height: 3px;
+	background-color: #111;
+	transition: transform 0.5s;
+}
+
+.faq-slide-switch .plus-min div:nth-child(2) {
+	margin-top: -3px;
+}
+
+/*plus minus aktivasi*/
+.faq-slide-active .faq-slide-switch .plus-min div:nth-child(2) {
+	transform: rotate(-90deg);
+	transition: transform 0.4s;
+}
+
+/*faq content activasi*/
+.faq-slide-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.faq-slide-active .faq-slide-content {
+	max-height: 200px;
+	border-radius: 10px;
+	transition: 1s;
+}
+
+.faq-content img {
+	width: 200px;
+	border-radius: 50%;
+}
+
+aside section.description {
+	max-width: 400px;
+	text-align: justify;
+	margin-top: 0px;
+}
+/*------------FOOTER------------*/
+footer {
+	text-align: center;
+	background-color: #111;
+	color: white;
+	padding: 10px;
+}
+
+/*------------RESPONSIVE------------*/
+
+@media screen and (max-width: 800px) {
+	body {
+		background-position: 100%;
+	}
+	.hero {
+		height: 300px;
+		gap: 0px;
+		background-position: 0% 0%;
+	}
+	.hero img {
+		width: 80px;
+	}
+	.content article img{
+		width: 100vw;
+	}
+	article.sejarah,
+	article.detail,
+	.faq-content {
+		flex-direction: column;
+		margin: 20px;
+		gap: 20px;
+	}
+	.content article:nth-child(even) section {
+		order: 0;
+	}
+
+	.hero img:nth-child(4) {
+		margin-left: 10px;
+	}
+	p,h3,ul,b{
+		font-size: 1em;
+	}
+	h2{
+		font-size: 2em;
+	}
+}
